@@ -157,14 +157,14 @@ export default function Reels({ navigation }) {
       />
       
       {/* Header */}
-      <View className="absolute top-0 left-0 right-0 flex-row justify-between items-center px-4 pt-12 pb-4">
+      <View className="absolute top-10 left-0 right-0 flex-row justify-between items-center px-4 pt-12 pb-4">
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Feather name="arrow-left" size={24} color="white" />
         </TouchableOpacity>
         <Text className="text-white text-xl font-bold" style={{ fontFamily: "Livvic_700Bold" }}>
           Reels
         </Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
           <Feather name="camera" size={24} color="white" />
         </TouchableOpacity>
       </View>

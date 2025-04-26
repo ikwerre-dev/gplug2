@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { View, ActivityIndicator } from "react-native";
 import FontLoader from "./src/components/FontLoader";
 import { AuthProvider, useAuth } from "./src/context/AuthContext";
+import CameraScreen from "./src/screens/main/CameraScreen"
 
 // Auth Screens
 import OnboardingScreen from "./src/screens/auth/OnboardingScreen";
@@ -51,6 +52,11 @@ function TabNavigator() {
         options={{ tabBarIcon: "map-marker" }}
       />
       <Tab.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{ tabBarIcon: "camera" }}
+      />
+      <Tab.Screen
         name="Reels"
         component={Reels}
         options={{ tabBarIcon: "play-circle" }}
@@ -91,6 +97,7 @@ const RootNavigator = () => {
           <Stack.Screen name="ProfileDetails" component={ProfileDetails} />
           <Stack.Screen name="Notifications" component={Notifications} />
           <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen name="Camera" component={CameraScreen} options={{ headerShown: false }} />
         </>
       ) : (
         <>

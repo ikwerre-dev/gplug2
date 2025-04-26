@@ -14,13 +14,18 @@ export default function MenuBar({ state, descriptors, navigation }) {
         navigation.navigate(routeName);
     };
 
-    // Map tab names to icon names and haptic intensities
     const tabConfig = {
         Home: { icon: "heart", intensity: "heavy" },
         Find: { icon: "map-marker", intensity: "medium" },
         Reels: { icon: "play-circle", intensity: "medium" },
+        Camera: { icon: "camera", intensity: "medium" },
         ChatList: { icon: "message-text", intensity: "light" }
     };
+
+    const currentRoute = state.routes[state.index].name;
+    if (currentRoute === "Reels" || currentRoute === "Camera") {
+        return null;
+    }
 
     return (
         <View className="absolute px-[2rem] py-[3rem] bottom-0 left-0 right-0">

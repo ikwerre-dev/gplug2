@@ -136,25 +136,11 @@ export default function Home({ navigation }) {
             </View>
           </View>
         </View>
-
-        {/* Search Bar */}
-        <View className="px-6 mb-6">
-          <View className="flex-row items-center border border-[#00000050] rounded-xl px-5 py-4">
-            <Feather name="search" size={20} color="#6B7280" />
-            <TextInput
-              placeholder="Search by name, interests, location"
-              placeholderTextColor="#6B7280"
-              className="ml-2 text-base flex-1"
-              style={{ fontFamily: "Livvic_400Regular" }}
-            />
-          </View>
-        </View>
+ 
 
         {/* Categories */}
-        <View className="px-6 mb-6">
-          <Text className="text-xl text-gray-700 font-semibold mb-4" style={{ fontFamily: "Livvic_600SemiBold" }}>
-            Categories
-          </Text>
+        <View className="px-6 mt-3 mb-6">
+        
 
           <ScrollView horizontal showsHorizontalScrollIndicator={false} className="ml-[-6px]">
             <CategoryCard
