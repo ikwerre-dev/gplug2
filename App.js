@@ -111,13 +111,13 @@ const RootNavigator = () => {
 // Main App component
 const App = () => {
   return (
-    <AuthProvider>
-      <FontLoader>
-        <NavigationContainer>
+    <NavigationContainer>
+      <AuthProvider>
+        <FontLoader>
           <RootNavigator />
-        </NavigationContainer>
-      </FontLoader>
-    </AuthProvider>
+        </FontLoader>
+      </AuthProvider>
+    </NavigationContainer>
   );
 };
 
